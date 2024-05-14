@@ -198,7 +198,7 @@ const App = () => {
         const generateMatrixNapriamlena = (vertexCount) => {
             let matrix = [
                 [1,1,0,1,1,0,0,0,1,1,1],
-                [0,0,0,0,0,0,0,0,0,0,1,],
+                [0,0,0,0,0,0,0,0,0,0,1],
                 [1,1,0,0,1,1,0,0,0,1,0],
                 [1,0,0,1,1,0,0,0,0,1,0],
                 [1,0,0,1,0,1,1,0,0,0,1],
@@ -397,6 +397,8 @@ const App = () => {
             setVerticesRow(newVisitedVertices)
             setLinesRow(newVisitedLines)
             setVisitedVertices([{cordinates: dataVertices[0], index: 0}, ...dataVisitedVertices, ...newVisitedVertices])
+
+            console.log(dataVisitedVertices)
         }
     }
 
@@ -437,8 +439,8 @@ const App = () => {
                 }
             }
         })
-        console.log("startV-",startVertice)
-        console.log("NewV-",newVisitedVertices[0])
+        // console.log("startV-",startVertice)
+        // console.log("NewV-",newVisitedVertices[0])
         console.log("VisitedV-",dataVisitedVertices)
 
         dataLines.forEach((line) =>{
